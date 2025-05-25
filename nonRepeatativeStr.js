@@ -23,7 +23,14 @@ function nonRepeatativeStr(str) {
 console.log(nonRepeatativeStr(str)); // Output: "k"
 
 
-users = new Set();
-users.add({ name: "Alice" });
-users.add({ name: "Bob" });
-console.log(users); // Contains unique objects
+// users = new Set();
+// users.add({ name: "Alice" });
+// users.add({ name: "Bob" });
+// console.log(users); // Contains unique objects
+
+
+const users = new Map();
+users.set("Alice", { age: 25 });
+users.set("Bob", { age: 30 });
+console.log(users.get("Alice")); // Contains unique keys with associated values // { age: 25 }
+console.log(users.get("Alice").age); // 25
