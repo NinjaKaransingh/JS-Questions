@@ -4,7 +4,7 @@
   "main": "nonRepeatativeStr.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon nonRepeatativeStr.js"
+    "start": "nodemon palindrome.js"
   },
   "keywords": [],
   "author": "",
