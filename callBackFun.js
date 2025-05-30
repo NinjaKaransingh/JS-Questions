@@ -6,7 +6,6 @@ greet("Karansingh", (e) => {
   console.log(`Hello : ${e}`);
 });
 
-
 //arrow function
 const add = (a, b) => a + b;
 console.log(add(2.4, 4));
@@ -57,3 +56,5 @@ console.log(1 === "1"); // false (strict equality)
 console.log(1 == "1"); // true (loose equality)
 console.log(null == undefined); // true (loose equality)
 console.log(null === undefined); // false (strict equality)
+
+//event loop, slice(), splice()
