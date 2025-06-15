@@ -8,6 +8,7 @@ function freqArr(arr) {
             freq[arr[i]] +=1;
         }
         else{
+            debugger
             freq[arr[i]] = 1;
         }
     }
@@ -15,4 +16,14 @@ function freqArr(arr) {
 }
 
 console.log(freqArr(arr));
-// Output: { '1': 4, '2': 1, '3': 2, '4': 1, '5': 2, '6': 2, '8': 2, '9': 1, '10': 2 }  
+// Output: { '1': 3, '2': 1, '3': 2, '4': 1, '5': 2, '6': 2, '8': 2, '9': 1, '10': 2 }
+// Using reduce method
+const freqEleArr = (arr) => {
+    return arr.reduce((acc, curr) => {
+        acc[curr] = (acc[curr] || 0) + 1;
+        return acc;
+    }, {});
+}; 
+
+console.log(freqEleArr(arr));
+
