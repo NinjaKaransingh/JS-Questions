@@ -48,4 +48,26 @@ function nonRepeatativeStr(str = "aaash") {
   }
   return "not having any repeatative characters";
 }
-console.log(nonRepeatativeStr()); // Output: 'akash'
+console.log(nonRepeatativeStr()); // Output: 's'
+
+console.log(nanonRepeatativeVal()); // Output: 'R'
+
+function nanonRepeatativeVal(str = "Radha") {
+  let str1 = {};
+  for (let i = 0; i < str.length; i++) {
+    if(str1[str[i]]){
+      str1[str[i]] +=1;
+    }
+    else{
+      str1[str[i]] = 1;
+    }
+  }
+
+  for (const char of str) {
+    if(str1[char] === 1){
+      return char;
+    }
+  }
+  return "not having any repeatative characters";
+}
+
