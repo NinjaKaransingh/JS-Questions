@@ -20,7 +20,7 @@ function nonRepeatativeStr(str) {
     return str;
 }
 
-console.log(nonRepeatativeStr(str)); // Output: "ka"
+console.log(nonRepeatativeStr(str)); // Output: "k"
 
 
 // users = new Set();

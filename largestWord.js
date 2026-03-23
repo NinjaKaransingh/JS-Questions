@@ -3,7 +3,7 @@ let str = "GeeksForGeeks is greatwebsitetolearn";
 function largestWord(str) {
     let words = str.split(" ");
     let largeWord = words[0];
-    for (let i = 0; i < words.length; i++) {
+    for (let i = 1; i < words.length; i++) {
         if(largeWord.length < words[i].length){
             largeWord = words[i];
         }

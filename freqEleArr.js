@@ -8,7 +8,6 @@ function freqArr(arr) {
             freq[arr[i]] +=1;
         }
         else{
-            debugger
             freq[arr[i]] = 1;
         }
     }

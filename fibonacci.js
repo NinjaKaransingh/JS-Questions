@@ -21,7 +21,7 @@ fibonacciNum = (num) => {
         num1 = num2;
         num2 = nextNum;
     }
-    return num2;
+    return num1;
 }
 
 console.log(fibonacciNum(5))
