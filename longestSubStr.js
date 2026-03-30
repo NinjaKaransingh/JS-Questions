@@ -2,27 +2,26 @@
 // Output: 3
 // Explanation: "abc"
 
-// Input:  "abcabcbb"
-// Output: 3
-// Explanation: "abc"
-
-// Input:  "abcabcbb"
-// Output: 3
-// Explanation: "abc"
-
 // Implementation of the code is not correct -  need to correct this
 
-// function longestSubStrWithoutRepeatingChar(str) {
-//   let map = {};
-//   let str1 = "";
-//   for (const char of str) {
-//     if (map[char] >= 1) {
-//       break;
-//     } else {
-//       str1 += map[char];
-//     }
-//   }
-//   return str1.length;
-// }
+function longestSubStrWithoutRepeatingChar(str) {
+  let set = new Set();
 
-// console.log(longestSubStrWithoutRepeatingChar("abcabcbb"));
+  let left = 0;
+  let maxLength = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    while (set.has(str[i])) {
+      set.delete(str[left]);
+      left++;
+    }
+    set.add(str[i]);
+    maxLength = Math.max(maxLength, i - left + 1);
+  }
+
+  return maxLength;
+}
+
+console.log(longestSubStrWithoutRepeatingChar("abcabcbb")); // 3
+console.log(longestSubStrWithoutRepeatingChar("bbbbb")); // 1
+console.log(longestSubStrWithoutRepeatingChar("pwwkew")); // 3
