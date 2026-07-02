@@ -6,7 +6,7 @@ function duplicateNum(arr) {
     let char = arr[i];
     if (map[char]) {
       map[char] += 1;
-      if (map[char] > 1) {
+      if (map[char] === 2) {
         arr1.push(char);
       }
     } else {
