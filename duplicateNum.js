@@ -1,16 +1,16 @@
 function duplicateNum(arr) {
-  let map = {};
+  let obj = {};
   let arr1 = [];
 
   for (let i = 0; i < arr.length; i++) {
     let char = arr[i];
-    if (map[char]) {
-      map[char] += 1;
-      if (map[char] === 2) {
+    if (obj[char]) {
+      obj[char] += 1;
+      if (obj[char] === 2) {
         arr1.push(char);
       }
     } else {
-      map[char] = 1;
+      obj[char] = 1;
     }
   }
   return arr1;
